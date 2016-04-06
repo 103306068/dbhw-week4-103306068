@@ -61,10 +61,10 @@
         } else {
           var libraryList = data.result.results;
           var HTMLLibraryList = libraryList.map(function(library) {
-            var HTMLString = "<div class='col-md-4 drop-"+(Math.round(Math.random()*10000%3)+1)+"'><h2>"+library.Name+"</h2><img class='img-thumbnail' src='"+library.Image+"'><p><ul class='list-group'>";
+            var HTMLString = "<div class='col-md-4 drop-"+(Math.round(Math.random()*10000%3)+1)+"'><h2>"+library.o_tlc_agency_name+"</h2><img class='img-thumbnail' src='"+library.o_tlc_agency_img_front+"'><p><ul class='list-group'>";
             var items = "";
             for (var key in library) {
-              if(key!="_id" && key!="Image") {
+              if(key!="_id" && key!="o_tlc_agency_img_front") {
                 items=items+"<li class='list-group-item'>"+key+":"+library[key]+"</li>";
               }
             }
